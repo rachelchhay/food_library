@@ -1,0 +1,23 @@
+{
+  "name": "food_library",
+  "version": "1.0.0",
+  "description": "Rachel Chhay AJ Moser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelchhay/food_library.git"
+  },
+  "author": "Rachel and AJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachelchhay/food_library/issues"
+  },
+  "homepage": "https://github.com/rachelchhay/food_library#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
