@@ -13,7 +13,14 @@
     <h1>Food Nutrition Stats</h1>
 
     <ul>
-      <li ng-repeat="food in ctrl.foundFood">{{food}}</li>
+      <li ng-repeat="food in ctrl.foundFood">
+        Food Name: {{food.name}} <br>
+        Sugar: {{food.sugar}} <br>
+        Calories: {{food.calories}} <br>
+        Carbs: {{food.carbs}} <br>
+        Fiber: {{food.fiber}} <br>
+        Type: {{food.type}} <br>
+      </li>
     </ul>
 
     <form ng-submit="ctrl.createFood();">
