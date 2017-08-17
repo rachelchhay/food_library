@@ -10,7 +10,21 @@
   </head>
   <body ng-controller="FoodController as ctrl">
 
-    {{2+2}}
+    <h1>Food Nutrition Stats</h1>
+
+    <ul>
+      <li ng-repeat=""></li>
+    </ul>
+
+    <form ng-submit="ctrl.createFood();">
+      Food Name: <input type="text" >
+      Sugar: <input type="number">
+      Calories: <input type="number">
+      Carbs: <input type="number">
+      Fiber: <input type="number">
+      Type: <input type="text">
+      <input type="submit" value="Create New Food Item">
+    </form>
 
   </body>
 </html>
