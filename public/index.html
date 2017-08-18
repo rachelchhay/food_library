@@ -22,10 +22,16 @@
         Type: {{food.type}} <br>
 
         <a href="#" ng-click="ctrl.indexOfEdit = $index">Edit Food Item</a>
-        <form >
-
+        <form ng-if="$index === ctrl.indexOfEdit" ng-submit="ctrl.editFood(food)">
+          <input class="form-row" type="text" ng-model=ctrl.updatedName placeholder="name">
+          <input class="form-row"type="number" ng-model=ctrl.updatedSugar placeholder="sugar">
+          <input class="form-row"type="number" ng-model=ctrl.updatedCalories placeholder="calories">
+          <input class="form-row"type="number" ng-model=ctrl.updatedCarbs placeholder="carbs">
+          <input class="form-row"type="number" ng-model=ctrl.updatedFiber placeholder="fiber">
+          <input class="form-row"type="text" ng-model=ctrl.updatedType placeholder="type"><br/>
+          <input type="submit" value="Update Food Item">
         </form>
-        
+
       </li>
     </ul>
 

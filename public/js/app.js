@@ -53,7 +53,11 @@ app.controller('FoodController', ['$http', function($http){
         fiber: this.updatedFiber,
         type: this.updatedType
       }
-    })
+    }).then(function(response){
+        controller.getFood();
+    }, function(error){
+        console.log(error);
+    });
   }
 
 
