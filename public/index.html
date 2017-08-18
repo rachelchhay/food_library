@@ -13,7 +13,7 @@
     <h1>Food Nutrition Stats</h1>
 
     <ul>
-      <li ng-repeat="food in ctrl.foundFood">
+      <li class="foodStatsPrint" ng-repeat="food in ctrl.foundFood">
         Food Name: {{food.name}} <br>
         Sugar: {{food.sugar}} <br>
         Calories: {{food.calories}} <br>
@@ -29,13 +29,13 @@
       </li>
     </ul>
 
-    <form ng-submit="ctrl.createFood();">
-      Food Name: <input type="text" ng-model=ctrl.name>
-      Sugar: <input type="number" ng-model=ctrl.sugar>
-      Calories: <input type="number" ng-model=ctrl.calories>
-      Carbs: <input type="number" ng-model=ctrl.carbs>
-      Fiber: <input type="number" ng-model=ctrl.fiber>
-      Type: <input type="text" ng-model=ctrl.type>
+    <form ng-submit="ctrl.createFood();" class="foodStatsForm">
+      <span class ="formLabels">Food Name: </span><input class="form-row" type="text" ng-model=ctrl.name>
+      Sugar: <input class="form-row"type="number" ng-model=ctrl.sugar>
+      Calories: <input class="form-row"type="number" ng-model=ctrl.calories>
+      Carbs: <input class="form-row"type="number" ng-model=ctrl.carbs>
+      Fiber: <input class="form-row"type="number" ng-model=ctrl.fiber>
+      Type: <input class="form-row"type="text" ng-model=ctrl.type><br/>
       <input type="submit" value="Create New Food Item">
     </form>
 
