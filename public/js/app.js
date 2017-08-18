@@ -60,6 +60,19 @@ app.controller('FoodController', ['$http', function($http){
     });
   }
 
+  // Delete Food item
+  this.deleteFood = function(food){
+    $http({
+      method: 'DELETE',
+      url: '/food/' + food._id
+    }).then(
+      function(response){
+        controller.getFood();
+      }, function(error){
+        console.log(error);
+      });
+  }
+
 
 
 
