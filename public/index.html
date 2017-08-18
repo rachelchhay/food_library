@@ -12,13 +12,13 @@
 
     <h1>Food Nutrition Stats</h1>
 
-<!-- Keep <ul> together -->
+<!-- Keep <ul> together ============= -->
     <ul>
       <li class="foodStatsPrint" ng-repeat="food in ctrl.foundFood">
         Food Name: {{food.name}} <br>
         Sugar: {{food.sugar}} <br>
         Calories: {{food.calories}} <br>
-        Carbs: {{food.carbs}} <br>    
+        Carbs: {{food.carbs}} <br>
         Fiber: {{food.fiber}} <br>
         Type: {{food.type}} <br>
 
@@ -36,7 +36,7 @@
 
       </li>
     </ul>
-<!-- Keep <ul> together -->
+<!-- Keep <ul> together ================-->
 
     <form ng-submit="ctrl.createFood();" class="foodStatsForm">
       <span class ="formLabels">Food Name: </span><input class="form-row" type="text" ng-model=ctrl.name>
