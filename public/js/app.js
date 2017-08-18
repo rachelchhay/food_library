@@ -3,6 +3,8 @@ const app = angular.module('FoodApp', []);
 app.controller('FoodController', ['$http', function($http){
   // redefine "this"
   const controller = this;
+  // Used to edit
+  this.indexOfEdit = 1;
 
   // Create Food function
   this.createFood = function() {
@@ -24,6 +26,7 @@ app.controller('FoodController', ['$http', function($http){
     });
   }
 
+  // Get Food function
   this.getFood = function(){
     $http({
       method: 'GET',
@@ -36,6 +39,22 @@ app.controller('FoodController', ['$http', function($http){
   }
 
   this.getFood();
+
+  // Edit Food item
+  this.editFood = function(food){
+    $http({
+      method: 'PUT',
+      url: '/food/' + food._id,
+      data: {
+        name: this.updatedName,
+        sugar: this.updatedSugar,
+        calories: this.updatedCalories,
+        carbs: this.updatedCarbs,
+        fiber: this.updatedFiber,
+        type: this.updatedType
+      }
+    })
+  }
 
 
 
