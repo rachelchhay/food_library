@@ -12,7 +12,9 @@
 
     <h1>Food Nutrition Stats</h1>
 
-<!-- Keep <ul> together ============= -->
+
+<!-- Keep <ul> together -->
+
     <ul>
       <li class="foodStatsPrint" ng-repeat="food in ctrl.foundFood">
         Food Name: {{food.name}} <br>
@@ -22,7 +24,9 @@
         Fiber: {{food.fiber}} <br>
         Type: {{food.type}} <br>
 
+
         <button ng-click="ctrl.deleteFood(food)">Delete Food Item</button>
+
         <a href="#" ng-click="ctrl.indexOfEdit = $index">Edit Food Item</a>
         <form ng-if="$index === ctrl.indexOfEdit" ng-submit="ctrl.editFood(food)">
           <span class="label"> Food Name: </span><input class="form-row" type="text" ng-model=ctrl.updatedName placeholder="name"><br/>
@@ -33,7 +37,6 @@
           Fruit or Veggie:<input class="form-row"type="text" ng-model=ctrl.updatedType placeholder="type"><br/>
           <input type="submit" value="Update Food Item">
         </form>
-
       </li>
     </ul>
 <!-- Keep <ul> together ================-->
