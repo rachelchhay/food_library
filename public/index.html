@@ -21,6 +21,7 @@
         Fiber: {{food.fiber}} <br>
         Type: {{food.type}} <br>
 
+        <button ng-click="ctrl.deleteFood(food)">Delete Food Item</button>
         <a href="#" ng-click="ctrl.indexOfEdit = $index">Edit Food Item</a>
         <form ng-if="$index === ctrl.indexOfEdit" ng-submit="ctrl.editFood(food)">
           <input class="form-row" type="text" ng-model=ctrl.updatedName placeholder="name">
