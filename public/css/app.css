@@ -1,0 +1,29 @@
+.foodStatsForm{
+  max width:1200px;
+  margin: 40px auto 0 auto;
+  padding: 10px 0;
+  background-color: grey;
+  flex-wrap: wrap;
+}
+.form-row {
+  width: 120px;
+  height: 20px;
+  background-color: blue;
+  color: #FFF;
+  line-height: 100px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 20px;
+  flex-basis: 10%;
+}
+@media (min-width 900px){
+  .foodStatsForm{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.formLabels {
+  font-weight: bold;
+  font-size: 20px;
+}
