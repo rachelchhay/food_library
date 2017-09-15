@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app='FoodApp'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" charset="utf-8"/></script>
+    <script src="/js/app.js"/></script>
+    <link rel="stylesheet" href="/css/app.css">
+
+  </head>
+  <body ng-controller="FoodController as ctrl">
+
+    <h1>Food Nutrition Stats</h1>
+
+
+<!-- Keep <ul> together -->
+
+    <ul>
+      <li class="foodStatsPrint" ng-repeat="food in ctrl.foundFood">
+        Food Name: {{food.name}} <br>
+        Sugar: {{food.sugar}} <br>
+        Calories: {{food.calories}} <br>
+        Carbs: {{food.carbs}} <br>
+        Fiber: {{food.fiber}} <br>
+        Type: {{food.type}} <br>
+
+
+        <button ng-click="ctrl.deleteFood(food)">Delete Food Item</button>
+
+        <a href="#" ng-click="ctrl.indexOfEdit = $index">Edit Food Item</a>
+        <form ng-if="$index === ctrl.indexOfEdit" ng-submit="ctrl.editFood(food)">
+          <span class="label"> Food Name: </span><input class="form-row" type="text" ng-model=ctrl.updatedName placeholder="name"><br/>
+          <span class="label">Amount of suger per serving:</span> <input class="form-row"type="number" ng-model=ctrl.updatedSugar placeholder="sugar"><br/>
+          Calories per serving: <input class="form-row"type="number" ng-model=ctrl.updatedCalories placeholder="calories"><br/>
+          Carbs per serving: <input class="form-row"type="number" ng-model=ctrl.updatedCarbs placeholder="carbs"><br/>
+          Grams of fiber per serving: <input class="form-row"type="number" ng-model=ctrl.updatedFiber placeholder="fiber"><br/>
+          Fruit or Veggie:<input class="form-row"type="text" ng-model=ctrl.updatedType placeholder="type"><br/>
+          <input type="submit" value="Update Food Item">
+        </form>
+      </li>
+    </ul>
+<!-- Keep <ul> together ================-->
+
+    <form ng-submit="ctrl.createFood();" class="foodStatsForm">
+      <span class ="formLabels">Food Name: </span><input class="form-row" type="text" ng-model=ctrl.name>
+      <span class ="formLabels">Sugar: </span><input class="form-row"type="number" ng-model=ctrl.sugar>
+      <span class ="formLabels">Calories: <input class="form-row"type="number" ng-model=ctrl.calories></span>
+      <span class ="formLabels">Carbs: <input class="form-row"type="number" ng-model=ctrl.carbs></span>
+      <span class ="formLabels">Fiber: <input class="form-row"type="number" ng-model=ctrl.fiber></span>
+      <span class ="formLabels">Type: <input class="form-row"type="text" ng-model=ctrl.type></span><br/>
+      <input type="submit" value="Create New Food Item">
+    </form>
+
+  </body>
+</html>
